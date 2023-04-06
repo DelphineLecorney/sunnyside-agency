@@ -1,0 +1,34 @@
+// Variables pour les mixins
+
+@mixin heading-font {
+    font-family: $font-fraunces;
+    font-weight: 900;
+    font-size: 30px;
+    color: $color-white;
+    letter-spacing: 2px;
+  }
+
+@mixin others-heading {
+  font-family: $font-fraunces;
+  font-weight: 700;
+}
+
+@mixin p-font {
+    font-family: $font-barlow;
+    font-weight: 600;
+    color: $color-very-dark-grayish-blue;
+}
+
+@mixin screen-mobile {
+  @media screen and (max-width: $screen-mobile) {
+    // Masquer le logo
+    .logo {
+      display: none;
+    }
+  }
+}
+
+@mixin screen-desktop {
+  @media screen and (max-width: $screen-desktop) {
+  }
+}
