@@ -1,0 +1,12 @@
+// Mixin pour la police
+@mixin font($family, $weight) {
+    font-family: $family;
+    font-weight: $weight;
+}
+
+// Mixin pour les écrans
+@mixin screen($size) {
+    @media (min-width: $size) {
+        @content;
+    }
+}

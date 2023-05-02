@@ -1,0 +1,82 @@
+
+// ************ Code scss *************
+@import './reset.css';
+@import './variables';
+@import './mixins';
+
+body {
+    font-size: 18px;
+    @include font($font-barlow, 600);
+    color: $color-very-dark-grayish-blue;
+  }
+
+header {
+    background-image: url(../pictures/mobile/image-header.jpg);
+    width: 100%;
+}
+
+.header-menu {
+    display: none;
+}
+h1 {
+    @include font($font-fraunces, 900);
+    color: #fff;
+    margin-bottom: 30px;
+    @include screen($screen-desktop) {
+      font-size: 64px;
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap; /* Permet à la ligne de se casser si nécessaire */
+    justify-content: space-between; /* Espace entre les colonnes */
+  }
+  
+  .column {
+    width: calc(50% - 10px); /* Taille des colonnes, moins l'espace entre les colonnes */
+    /* Style des colonnes */
+  }
+  
+
+.transform-text,
+.column-img-transform {
+    display: flex;
+    flex-direction: column;
+}
+
+.stand-out-text h2{
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    width: 200px;
+}
+
+h2 {
+    @include font($font-fraunces, 900);
+}
+  
+  
+  p {
+    color: $color-dark-grayish-blue;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    @include font($font-barlow, 600);
+    color: $color-white;
+    background-color: $color-yellow;
+    padding: 16px 32px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in-out;
+  
+    &:hover {
+      background-color: lighten($color-yellow, 10%);
+    }
+  
+    @include screen($screen-desktop) {
+      font-size: 18px;
+    }
+  }
