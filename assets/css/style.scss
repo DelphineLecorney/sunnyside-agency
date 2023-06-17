@@ -13,23 +13,27 @@ body {
 header {
     background-image: url(../pictures/mobile/image-header.jpg);
     width: 100%;
+    text-align: center;
+    font-size: 40px;
 }
 
 .header-menu {
     display: none;
 }
 h1 {
-    @include font($font-fraunces, 900);
-    color: #fff;
+
     margin-bottom: 30px;
+    @include font($font-fraunces, 900);
+    color: #fff; 
     @include screen($screen-desktop) {
       font-size: 64px;
     }
+    
   }
 
   .row {
     display: flex;
-    flex-wrap: wrap; /* Permet à la ligne de se casser si nécessaire */
+    flex-direction: column-reverse; /* Permet à la ligne de se casser si nécessaire */
     justify-content: space-between; /* Espace entre les colonnes */
   }
   
